@@ -20,9 +20,8 @@ def moretables(query):
 
 def assign_table(table_number, name, vip_status):
 
-    acc_tableNum = ['1', '2', '3', '4', '5', '6', '7']
-    if table_number not in acc_tableNum:
-        return assign_table(input("Invalid table number. \nTable Number?  "), name,vip_status)
+
+        return assign_table(input("Invalid table number. \nPlease reenter the table the Guest\'s will be seated at:  "), name,vip_status)
     acc_vip_status = ['yes', 'no']
 
 
@@ -39,7 +38,7 @@ def assign_table(table_number, name, vip_status):
 
 
 while moretables(input('Assign Table? ').lower()) == "yes":
-    assign_table(input('Table Number? '), input('Guest\'s last Name? ').capitalize(),input('Is the Guest a VIP? ').lower())
+    assign_table(input('Seating at Table?  '), input('Guest\'s last Name? ').capitalize(),input('Is the Guest a VIP? ').lower())
 
 
 
