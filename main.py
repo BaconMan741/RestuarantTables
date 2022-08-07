@@ -9,7 +9,7 @@ tables = {
 }
 
 
-def moretables(query = input('Assign Table? '))
+def moretables(query):
     acceptable_args = ['yes', 'no']
     if query not in acceptable_args:
         return moretables(input("Invalid input \nAssign Table?"))
@@ -18,7 +18,7 @@ def moretables(query = input('Assign Table? '))
 
 
 
-def assign_table(table_number = input('Table: '), name = input('Name: '), vip_status = input('VIP? ')):
+def assign_table(table_number, name, vip_status):
 
     acc_tableNum = ['1', '2', '3', '4', '5', '6', '7']
     if table_number not in acc_tableNum:
@@ -33,8 +33,8 @@ def assign_table(table_number = input('Table: '), name = input('Name: '), vip_st
 
 
 
-while moretables(query) == "yes":
-    assign_table(x,y,z)
+while moretables(input('Assign Table? ').lower()) == "yes":
+    assign_table(input('Table Number? '), input('Guest Name? ').capitalize(),input('Is the Guest a VIP? '))
 
 
 
