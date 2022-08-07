@@ -1,5 +1,5 @@
 tables = {
-    1: ['Jiho', False],
+    1: [],
     2: [],
     3: [],
     4: [],
@@ -8,9 +8,6 @@ tables = {
     7: [],
 }
 
-
-
-# Write your code below:
 
 def moretables(query = input('Assign Table? '))
     acceptable_args = ['yes', 'no']
@@ -27,7 +24,6 @@ def assign_table(table_number = input('Table: '), name = input('Name: '), vip_st
     if table_number not in acc_tableNum:
         return assign_table(input("Invalid table number. \nTable: "), y, z)
 
-
     if vip_status == "yes":
         vip_status = True
     else:
@@ -37,8 +33,8 @@ def assign_table(table_number = input('Table: '), name = input('Name: '), vip_st
 
 
 
-while moretables(w) == "yes":
-    assign_table(x,y,z))
+while moretables(query) == "yes":
+    assign_table(x,y,z)
 
 
 
