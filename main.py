@@ -9,9 +9,6 @@ tables = {
 }
 
 
-
-# Write your code below:
-
 def moretables(query):
     acceptable_args = ['yes', 'no']
     if query not in acceptable_args:
