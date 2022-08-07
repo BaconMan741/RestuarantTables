@@ -1,5 +1,5 @@
 tables = {
-    1: ['Jiho', False],
+    1: [],
     2: [],
     3: [],
     4: [],
@@ -9,10 +9,7 @@ tables = {
 }
 
 
-
-# Write your code below:
-
-def moretables(query):
+def moretables(query = input('Assign Table? '))
     acceptable_args = ['yes', 'no']
     if query not in acceptable_args:
         return moretables(input("Invalid input \nAssign Table?"))
@@ -21,9 +18,11 @@ def moretables(query):
 
 
 
-def assign_table(table_number, name, vip_status):
-    if table_number not in range(1,8):
+def assign_table(table_number = input('Table: '), name = input('Name: '), vip_status = input('VIP? ')):
 
+    acc_tableNum = ['1', '2', '3', '4', '5', '6', '7']
+    if table_number not in acc_tableNum:
+        return assign_table(input("Invalid table number. \nTable: "), y, z)
 
     if vip_status == "yes":
         vip_status = True
@@ -34,8 +33,8 @@ def assign_table(table_number, name, vip_status):
 
 
 
-while moretables(input('Assign Table? ')) == "yes":
-    assign_table(input("Table: "), input("Name: "), input("VIP? "))
+while moretables(query) == "yes":
+    assign_table(x,y,z)
 
 
 
